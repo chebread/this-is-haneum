@@ -30,15 +30,29 @@ root.innerHTML = `
 `;
 const links = document.querySelectorAll('a');
 links.forEach(item => {
-  item.addEventListener('mouseover', e => {
-    if (e.target.classList.value === 'is-hover') {
-    } else {
-      e.target.classList += 'is-hover';
-    }
-  });
-  item.addEventListener('mouseout', e => {
-    if (e.target.classList.value === 'is-hover') {
-      e.target.classList.remove('is-hover');
-    }
-  });
+  if ('ontouchstart' in document.documentElement) {
+    item.addEventListener('touchstart', e => {
+      if (e.target.classList.value === 'is-hover') {
+      } else {
+        e.target.classList += 'is-hover';
+      }
+    });
+    item.addEventListener('touchend', e => {
+      if (e.target.classList.value === 'is-hover') {
+        e.target.classList.remove('is-hover');
+      }
+    });
+  } else {
+    item.addEventListener('mouseover', e => {
+      if (e.target.classList.value === 'is-hover') {
+      } else {
+        e.target.classList += 'is-hover';
+      }
+    });
+    item.addEventListener('mouseout', e => {
+      if (e.target.classList.value === 'is-hover') {
+        e.target.classList.remove('is-hover');
+      }
+    });
+  }
 });

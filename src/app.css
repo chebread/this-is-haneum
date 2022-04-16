@@ -3,8 +3,21 @@ body {
     overflow-x: hidden;
     margin: 80px 15px 80px 15px;
 }
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+}
 header h1 {
     font-size: 22px;
+    font-weight: 500;
     line-height: 33px;
 }
 header h1 span {
