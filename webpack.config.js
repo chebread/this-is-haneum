@@ -1,42 +1,42 @@
-const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const nodeEnv = process.env.NODE_ENV || "development";
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const nodeEnv = process.env.NODE_ENV || 'development';
 
 module.exports = {
-  mode: nodeEnv === "development" ? "development" : "production",
+  mode: nodeEnv === 'development' ? 'development' : 'production',
   entry: {
-    main: "./src/app.js",
+    main: './src/app.js',
   },
   output: {
-    path: path.resolve("./dist"),
-    filename: "[name].js",
-    publicPath: "/",
+    path: path.resolve('./dist'),
+    filename: '[name].js',
+    publicPath: '/',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        use: "babel-loader",
+        use: 'babel-loader',
         exclude: /node_modules/,
       },
       {
         test: /\.css$/,
         use: [
-          nodeEnv === "development"
-            ? "style-loader"
+          nodeEnv === 'development'
+            ? 'style-loader'
             : {
                 loader: MiniCssExtractPlugin.loader,
               },
-          "css-loader",
+          'css-loader',
         ],
       },
       {
         test: /\.(png|jpg)$/,
-        loader: "file-loader",
+        loader: 'url-loader',
         options: {
-          name: "[name].[ext]?[hash]",
+          name: '[name].[ext]?[hash]',
           limit: 20000,
         },
       },
@@ -44,7 +44,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./index.html",
+      template: './index.html',
       minify: {
         collapseWhitespace: true,
         removeComments: true,
@@ -52,7 +52,7 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: '[name].css',
     }),
   ],
 };

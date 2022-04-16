@@ -3,6 +3,8 @@ import './app.css';
 import profileImg from './imgs/profile.png';
 import { render } from './render.js';
 
+let time;
+console.time(time);
 const root = document.querySelector('#root');
 // default renderings
 root.innerHTML = `
@@ -102,4 +104,5 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+  console.timeEnd(time);
 });
