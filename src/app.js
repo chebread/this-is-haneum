@@ -18,13 +18,40 @@ root.innerHTML = `
 render('ko');
 
 // for hover and laugage change
+let links = [];
 document.addEventListener('DOMContentLoaded', () => {
-  const links = document.querySelectorAll('a');
+  links = document.querySelectorAll('a');
   const buttons = document.querySelectorAll('button');
   buttons.forEach(item => {
     item.addEventListener('click', e => {
       const value = e.target.value;
       render(value);
+      links = document.querySelectorAll('a');
+      links.forEach(item => {
+        if ('ontouchstart' in document.documentElement) {
+          item.addEventListener('touchstart', e => {
+            if (!(e.target.classList.value === 'link-hover')) {
+              e.target.classList += 'link-hover';
+            }
+          });
+          item.addEventListener('touchend', e => {
+            if (e.target.classList.value === 'link-hover') {
+              e.target.classList.remove('link-hover');
+            }
+          });
+        } else {
+          item.addEventListener('mouseover', e => {
+            if (!(e.target.classList.value === 'link-hover')) {
+              e.target.classList += 'link-hover';
+            }
+          });
+          item.addEventListener('mouseout', e => {
+            if (e.target.classList.value === 'link-hover') {
+              e.target.classList.remove('link-hover');
+            }
+          });
+        }
+      });
     });
     if ('ontouchstart' in document.documentElement) {
       item.addEventListener('touchstart', e => {
