@@ -40,15 +40,19 @@ main p a {
 footer {
     margin-top: 50px;
 }
-footer p {
-    font-size: 16px;
-    line-height: 24px;
-}
-footer p a {
+footer button {
     all: unset;
     cursor: pointer;
-    color: royalblue;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 1px;
+    border: lightgray solid 1.375px;
+    background-color: whitesmoke;
 }
-.is-hover {
+.button-hover {
+    border: royalblue solid 1.375px;
+    background-color:cornflowerblue;
+}
+.link-hover {
     text-decoration: underline;
 }
