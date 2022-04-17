@@ -1,8 +1,8 @@
 import './reset.css';
 import './app.css';
 import profileImg from './imgs/profile.png';
-import { render } from './render.js';
-import { onLinkHover } from './onLinkHover';
+import { render } from './modules/render.js';
+import { onLinkHover } from './modules/onLinkHover.js';
 
 const root = document.querySelector('#root');
 const defaultTemplete = `
