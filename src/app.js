@@ -1,6 +1,6 @@
 import './reset.css';
 import './app.css';
-import profileImg from './imgs/profile.png';
+import profileImg from './imgs/profile.jpg';
 import { render } from './modules/render.js';
 import { onLinkHover } from './modules/onLinkHover.js';
 
