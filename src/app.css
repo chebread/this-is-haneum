@@ -53,7 +53,7 @@ footer button {
         background-color: rgb(245, 245, 245);
     }
     .button-hover {
-        background-color: rgb(95, 135, 255);
+        background-color: rgb(115, 155, 275);
     }
 }
 @media (prefers-color-scheme: dark) {
