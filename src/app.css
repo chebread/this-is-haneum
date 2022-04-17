@@ -8,25 +8,11 @@ body {
         background-color: white;
         color: black;
     }
-    footer button {
-        border: rgb(211, 211, 211) solid 1.375px;
-        background-color: rgb(245, 245, 245);
-    }
-    .button-hover {
-        background-color: rgb(115, 155, 275);
-    }
 }
 @media (prefers-color-scheme: dark) {
     body {
         background-color: black;
         color: white;
-    }
-    footer button {
-        border: rgb(44, 44, 44) solid 1.375px;
-        background-color: rgb(10, 10, 10);
-    }
-    .button-hover {
-        background-color: rgb(35, 75, 195);
     }
 }
 header h1 {
@@ -66,4 +52,22 @@ footer button {
 }
 .button-hover {
     border: royalblue solid 1.375px;
+}
+@media (prefers-color-scheme: light) {
+    footer button {
+        border: rgb(211, 211, 211) solid 1.375px;
+        background-color: rgb(245, 245, 245);
+    }
+    .button-hover {
+        background-color: rgb(115, 155, 275);
+    }
+}
+@media (prefers-color-scheme: dark) {
+    footer button {
+        border: rgb(44, 44, 44) solid 1.375px;
+        background-color: rgb(10, 10, 10);
+    }
+    .button-hover {
+        background-color: rgb(35, 75, 195);
+    }
 }
