@@ -46,13 +46,23 @@ footer button {
     font-size: 16px;
     line-height: 24px;
     padding: 1px;
-    border: lightgray solid 1.375px;
-    background-color: whitesmoke;
+}
+@media (prefers-color-scheme: light) {
+    footer button {
+        border: rgb(211, 211, 211) solid 1.375px;
+        background-color: rgb(245, 245, 245);
+    }
+}
+@media (prefers-color-scheme: dark) {
+    footer button {
+        border: rgb(44, 44, 44) solid 1.375px;
+        background-color: rgb(10, 10, 10);
+    }
+}
+.link-hover {
+    text-decoration: underline;
 }
 .button-hover {
     border: royalblue solid 1.375px;
     background-color:cornflowerblue;
-}
-.link-hover {
-    text-decoration: underline;
 }

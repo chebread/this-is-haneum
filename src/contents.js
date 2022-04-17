@@ -2,7 +2,7 @@ const stackOverflowUrl = 'https://stackoverflow.com/users/16726480/chebread';
 const blogUrl = 'https://haneum-blog.vercel.app/';
 const githubUrl = 'https://github.com/chebread';
 
-export const content = {
+export const contents = {
   en: {
     name: 'Cha Haneum',
     main: `
@@ -81,6 +81,54 @@ export const content = {
     <p>だから私はTypeScriptを使ったことがない。 それでも、TypeScriptは魅力的な言語だと思います！</ p>
     <br/>
     <p>私について質問がある場合は、<a href="${blogUrl}">私のブログ</a>または<a href="${githubUrl}">GitHub</a>にアクセスしてください。</ p>
+    `,
+  },
+  cn: {
+    name: 'Cha Haneum',
+    main: `
+      <p>你好。 我是Cha Haneum。 我是一名前端开发人员，也是一名旨在实现以用户为中心的 UI/UX 的开发人员。 我也对后端感兴趣。</p>
+      <p>但我仍然只知道如何使用 Express.js 仅配置 Webpack 服务器。</p>
+      <br/>
+      <p>另外，我喜欢在 <a href="${stackOverflowUrl}">Stack Overflow</a> 上回答相对简单的 JavaScript 相关问题。</p>
+      <br/>
+      <p>我真的很喜欢 JavaScript 本身。 但这不仅仅是 JavaScript。 我有时会使用 React.js。</p>
+      <br/>
+      <p>在我看来，JavaScript 的美妙之处在于它支持灵活的类型。 这对开发人员来说可能很烦人，但我认为这是 JavaScript 的优势之一。</p>
+      <p>所以我从来没有使用过 TypeScript。 不过，我认为 TypeScript 是一种迷人的语言！</p>
+      <br/>
+      <p>如果您对我有任何疑问，请访问 <a href="${blogUrl}">我的博客</a> 或 <a href="${githubUrl}">GitHub</a>。</p>
+    `,
+  },
+  es: {
+    name: 'Cha Haneum',
+    main: `
+      <p>Hola. Soy un Cha Haneum. Soy un desarrollador front-end y un desarrollador que tiene como objetivo implementar UI/UX totalmente centrado en el usuario. También estoy interesado en el backend.</p>
+      <p>Pero todavía solo sé configurar solo el servidor Webpack con Express.js.</p>
+      <br/>
+      <p>Además, me encanta responder preguntas relativamente sencillas relacionadas con JavaScript en <a href="${stackOverflowUrl}">Stack Overflow</a>.</p>
+      <br/>
+      <p>Me gusta mucho el propio JavaScript. Pero no es solo JavaScript. A veces uso React.js.</p>
+      <br/>
+      <p>La belleza de JavaScript, en mi opinión, es que admite tipos flexibles. Esto puede resultar molesto para los desarrolladores, pero creo que es uno de los puntos fuertes de JavaScript.</p>
+      <p>Así que nunca he usado TypeScript. Aun así, ¡creo que TypeScript es un lenguaje fascinante!</p>
+      <br/>
+      <p>Si tiene alguna pregunta sobre mí, visite <a href="${blogUrl}">mi blog</a> o <a href="${githubUrl}">GitHub</a>.</ p>
+    `,
+  },
+  ar: {
+    name: 'تشا هانيوم',
+    main: `
+      <p> مرحبًا. أنا تشا هانيوم. أنا مطور للواجهة الأمامية ومطور يهدف إلى تنفيذ UI / UX المتمحورة حول المستخدم. أنا مهتم أيضًا بالخلفية. </ p>
+      <p> ولكن ما زلت أعرف فقط كيفية تكوين خادم Webpack مع Express.js. </p>
+      <br/>
+      <p> أحب أيضًا الإجابة عن الأسئلة السهلة نسبيًا المتعلقة بجافا سكريبت على <a href="${stackOverflowUrl}"> Stack Overflow </a>. </p>
+      <br/>
+      <p> أحب حقًا JavaScript نفسها. لكنها ليست مجرد JavaScript. أحيانًا أستخدم React.js </p>
+      <br/>
+      <p> يكمن جمال JavaScript ، في رأيي ، في أنها تدعم الأنواع المرنة. قد يكون هذا مزعجًا للمطورين ، لكنني أعتقد أن هذه إحدى نقاط القوة في JavaScript. </p>
+      <p> لذلك لم أستخدم TypeScript مطلقًا. مع ذلك ، أعتقد أن TypeScript هي لغة رائعة! </ p>
+      <br/>
+      <p> إذا كان لديك أي أسئلة عني ، فيرجى الانتقال إلى <a href="${blogUrl}"> مدونتي </a> أو <a href="${githubUrl}"> GitHub </a>. </ ص>
     `,
   },
 };
