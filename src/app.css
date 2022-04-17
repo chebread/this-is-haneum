@@ -52,11 +52,17 @@ footer button {
         border: rgb(211, 211, 211) solid 1.375px;
         background-color: rgb(245, 245, 245);
     }
+    .button-hover {
+        background-color: rgb(95, 135, 255);
+    }
 }
 @media (prefers-color-scheme: dark) {
     footer button {
         border: rgb(44, 44, 44) solid 1.375px;
         background-color: rgb(10, 10, 10);
+    }
+    .button-hover {
+        background-color: rgb(35, 75, 195);
     }
 }
 .link-hover {
@@ -64,5 +70,4 @@ footer button {
 }
 .button-hover {
     border: royalblue solid 1.375px;
-    background-color:cornflowerblue;
 }
