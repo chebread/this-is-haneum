@@ -4,6 +4,8 @@ import profileImg from './imgs/profile.png';
 import { render } from './modules/render.js';
 import { onLinkHover } from './modules/onLinkHover.js';
 
+let time;
+console.time(time);
 const root = document.querySelector('#root');
 const defaultTemplete = `
   <header>
@@ -23,7 +25,7 @@ const defaultTemplete = `
   </footer>
 `;
 // default renderings
-root.innerHTML = defaultTemplete;
+root.insertAdjacentHTML('afterbegin', defaultTemplete);
 render('ko');
 
 // for hover and laugage change
@@ -60,4 +62,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
   onLinkHover(document.querySelectorAll('a'));
+  console.timeEnd(time);
 });
