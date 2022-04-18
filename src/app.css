@@ -17,7 +17,7 @@ body {
 }
 header h1 {
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 33px;
 }
 header h1 span {
@@ -52,7 +52,7 @@ footer button {
     color: royalblue;
 }
 .link-hover {
-    color: rgb(190, 150, 30)
+    text-decoration: underline;
 }
 .button-hover {
     border: rgb(65, 105, 225) solid 1.375px;
