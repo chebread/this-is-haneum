@@ -6,7 +6,7 @@ export const contents = {
   en: {
     name: 'Cha Haneum',
     main: `
-      <p>Hello. I am a Cha Haneum. I'm a front-end developer and a developer who aims to implement all-user-centric UI/UX. I'm also interested in the backend.</p>
+      <p>Hello. I am a Cha Haneum. I'm a Front-end developer and a developer who aims to implement all-user-centric UI/UX. I'm also interested in the backend.</p>
       <p>But I still only know how to configure only the Webpack server with Express.js.</p>
       <br/>
       <p>Also, I love answering relatively easy JavaScript-related questions on <a href="${stackOverflowUrl}">Stack Overflow</a>.</p>
