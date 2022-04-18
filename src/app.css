@@ -54,7 +54,7 @@ footer button {
     text-decoration: underline;
 }
 .button-hover {
-    border: royalblue solid 1.375px;
+    border: rgb(65, 105, 225) solid 1.375px;
 }
 @media (prefers-color-scheme: light) {
     footer button {
@@ -62,7 +62,7 @@ footer button {
         background-color: rgb(245, 245, 245);
     }
     .button-hover {
-        background-color: rgb(115, 155, 275);
+        background-color: rgb(135, 175, 295); /* rgb(142.5, 182.5, 302.5); */
     }
 }
 @media (prefers-color-scheme: dark) {
