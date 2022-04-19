@@ -1,15 +1,15 @@
 import './reset.css';
 import './app.css';
-import { render } from './modules/render.js';
-import { onLinkHover } from './modules/onLinkHover.js';
-import { defaultTemplete } from './modules/defaultTemplete.js';
+import { render } from './components/render.js';
+import { onLinkHover } from './components/onLinkHover.js';
+import { header } from './components/header.js';
+import { main } from './components/main.js';
+import { footer } from './components/footer.js';
 
 const root = document.querySelector('#root');
-// default renderings
-root.insertAdjacentHTML('afterbegin', defaultTemplete);
+root.insertAdjacentHTML('afterbegin', `${header()}${main()}${footer()}`);
 render('en');
-
-// for hover and laugage change
+// for link hover styling and laugauge changing
 document.addEventListener('DOMContentLoaded', () => {
   const buttons = document.querySelectorAll('button');
   buttons.forEach(item => {
