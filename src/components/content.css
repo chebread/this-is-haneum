@@ -1,0 +1,10 @@
+.content-wrapper {
+  display: flex;
+}
+.content-items img {
+  width: 100px;
+  height: 100px;
+}
+.hidden-item {
+  display: none;
+}
