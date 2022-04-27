@@ -9,32 +9,20 @@ const app = () => {
   const render = () => {
     const contentMsg = `
       <div class="content">
-        <div class="content-wrapper">
-          ${Object.keys(imgContents)
-            .map(
-              key =>
-                `<div class="content-items"><img value="${key}" src="${imgContents[key]}"/></div>`
-            )
-            .join('')}
-        </div>
+        <div class="content-wrapper"></div>
       </div>
     `;
     renderHTML(contentMsg, document.querySelector('#root'));
-    //   document.addEventListener('DOMContentLoaded', () => {
-    //     const items = document.querySelectorAll('.content-items img');
-    //     let value;
-    //     items.forEach(item => {
-    //       item.addEventListener('mouseover', e => {
-    //         if (e.target.attributes) {
-    //           value = e.target.attributes.value.value;
-    //           e.target.parentNode.innerHTML = `hello`;
-    //         }
-    //       });
-    //       item.addEventListener('mouseout', e => {
-    //         log(e);
-    //       });
-    //     });
-    //   });
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('.content-wrapper').innerHTML = `
+        ${Object.keys(imgContents)
+          .map(
+            key =>
+              `<div class="content-items"><img value="${key}" src="${imgContents[key]}"/></div>`
+          )
+          .join('')}
+      `;
+    });
   };
   render();
 };
