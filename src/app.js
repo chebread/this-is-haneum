@@ -13,7 +13,7 @@ const app = () => {
       </div>
     `;
     renderHTML(contentMsg, document.querySelector('#root'));
-    document.addEventListener('DOMContentLoaded', () => {
+    window.onload = () => {
       document.querySelector('.content-wrapper').innerHTML = `
         ${Object.keys(imgContents)
           .map(
@@ -22,7 +22,7 @@ const app = () => {
           )
           .join('')}
       `;
-    });
+    };
   };
   render();
 };
