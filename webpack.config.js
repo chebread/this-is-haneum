@@ -5,9 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 const { ESBuildMinifyPlugin } = require('esbuild-loader');
 const nodeEnv = process.env.NODE_ENV || 'development';
-const smp = new SpeedMeasurePlugin();
 
-module.exports = smp.wrap({
+const config = {
   mode: nodeEnv === 'development' ? 'development' : 'production',
   entry: {
     main: './src/app.js',
@@ -48,6 +47,14 @@ module.exports = smp.wrap({
       },
     ],
   },
+  optimization: {
+    minimizer: [
+      new ESBuildMinifyPlugin({
+        target: 'es2015',
+        css: true,
+      }),
+    ],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
@@ -57,16 +64,12 @@ module.exports = smp.wrap({
       },
     }),
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-    }),
   ],
-  optimization: {
-    minimizer: [
-      new ESBuildMinifyPlugin({
-        target: 'es2015',
-        css: true,
-      }),
-    ],
-  },
-});
+};
+const configWithSmp = new SpeedMeasurePlugin().wrap(config);
+configWithSmp.plugins.push(
+  new MiniCssExtractPlugin({
+    filename: '[name].css',
+  })
+);
+module.exports = configWithSmp;
