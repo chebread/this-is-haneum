@@ -2,9 +2,12 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
+const { ESBuildMinifyPlugin } = require('esbuild-loader');
 const nodeEnv = process.env.NODE_ENV || 'development';
+const smp = new SpeedMeasurePlugin();
 
-module.exports = {
+module.exports = smp.wrap({
   mode: nodeEnv === 'development' ? 'development' : 'production',
   entry: {
     main: './src/app.js',
@@ -18,8 +21,11 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: 'babel-loader',
+        loader: 'esbuild-loader',
         exclude: /node_modules/,
+        options: {
+          target: 'es2015',
+        },
       },
       {
         test: /\.css$/,
@@ -37,7 +43,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           name: '[name].[ext]?[hash]',
-          limit: 200000,
+          limit: 10000,
         },
       },
     ],
@@ -55,4 +61,12 @@ module.exports = {
       filename: '[name].css',
     }),
   ],
-};
+  optimization: {
+    minimizer: [
+      new ESBuildMinifyPlugin({
+        target: 'es2015',
+        css: true,
+      }),
+    ],
+  },
+});
