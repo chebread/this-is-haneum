@@ -1,10 +1,16 @@
+.content {
+  display: inline;
+}
 .content-wrapper {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-.content-items img {
+.content-items {
   width: 100px;
   height: 100px;
 }
-.hidden-item {
-  display: none;
+.content-items img {
+  width: inherit;
+  height: inherit;
 }
