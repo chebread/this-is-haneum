@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 const { ESBuildMinifyPlugin } = require('esbuild-loader');
 const nodeEnv = process.env.NODE_ENV || 'development';
-
 const config = {
   mode: nodeEnv === 'development' ? 'development' : 'production',
   entry: {

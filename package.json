@@ -1,7 +1,6 @@
 {
   "name": "this-is-haneum",
-  "version": "1.0.0",
-  "description": "This is to express me.",
+  "version": "0.1.0",
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "start": "webpack-dev-server"
