@@ -37,11 +37,11 @@ const config = {
         ],
       },
       {
-        test: /\.(png|jpg)$/,
+        test: /\.(png|jpe?g|gif)$/,
         loader: 'url-loader',
         options: {
           name: '[name].[ext]?[hash]',
-          limit: 10000,
+          limit: 20000,
         },
       },
     ],

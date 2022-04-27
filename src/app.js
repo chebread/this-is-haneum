@@ -4,7 +4,6 @@ import './components/content.css';
 import { renderHTML } from './components/renderHTML.js';
 import { imgContents } from './components/imgContents.js';
 
-// const log = console.log;
 const app = () => {
   const render = () => {
     const contentMsg = `
@@ -14,14 +13,13 @@ const app = () => {
     `;
     renderHTML(contentMsg, document.querySelector('#root'));
     document.addEventListener('DOMContentLoaded', () => {
-      document.querySelector('.content-wrapper').innerHTML = `
-        ${Object.keys(imgContents)
-          .map(
-            key =>
-              `<div class="content-items"><img value="${key}" src="${imgContents[key]}"/></div>`
-          )
+      renderHTML(
+        `${imgContents
+          .map(item => `<div class="content-items"><img src="${item}"/></div>`)
           .join('')}
-      `;
+        `,
+        document.querySelector('.content-wrapper')
+      );
     });
   };
   render();
