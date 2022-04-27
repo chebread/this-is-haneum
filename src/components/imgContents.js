@@ -9,6 +9,13 @@ const hard1Img =
   'https://velog.velcdn.com/images%2Fkim-taewoo%2Fpost%2Fb8ee8d29-42a7-4f7a-85d0-93698a2ac87b%2Ffail.gif';
 const love1Img =
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTAWduqkj6SPVIQe32haDaXg_mgSBIxGq1xA&usqp=CAU';
+const ryanDahlImg =
+  'http://berb.github.io/nodejs-talk-chaosseminar/assets/images/ryah.jpg';
+const dokdoImg =
+  'http://newsimg.hankookilbo.com/2019/09/25/201909251098716471_2.jpg';
+const js1Img =
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png';
+
 export const imgContents = [
   faceImg,
   footerImg,
@@ -17,4 +24,7 @@ export const imgContents = [
   clothes1Img,
   hard1Img,
   love1Img,
+  ryanDahlImg,
+  dokdoImg,
+  js1Img,
 ];
