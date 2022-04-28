@@ -20,11 +20,6 @@ const app = () => {
             key =>
               `<div class="content-items"><img
                 data-src="${imgContents[key].src}"
-                title="${
-                  !(imgContents[key].msg === undefined)
-                    ? `${imgContents[key].msg}`
-                    : 'No description is written on this photo.'
-                }"
                 alt="${
                   !(imgContents[key].msg === undefined)
                     ? `${imgContents[key].msg}`
