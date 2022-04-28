@@ -39,12 +39,9 @@ const app = () => {
             item.addEventListener('mouseleave', e => {
               item.classList.remove('is-hover-content-items');
               item.className = 'content-items';
-              item.innerHTML = `<img data-src="${
+              item.innerHTML = `<img src="${
                 imgContents[e.target.attributes.key.value].src
               }"/>`;
-              new IntersectionObserver(onImgLoad).observe(
-                item.attributes[1].ownerElement.childNodes[0]
-              );
             });
           });
         } else {
@@ -58,12 +55,9 @@ const app = () => {
             item.addEventListener('touchend', e => {
               item.classList.remove('is-hover-content-items');
               item.className = 'content-items';
-              item.innerHTML = `<img data-src="${
+              item.innerHTML = `<img src="${
                 imgContents[e.target.attributes.key.value].src
               }"/>`;
-              new IntersectionObserver(onImgLoad).observe(
-                item.attributes[1].ownerElement.childNodes[0]
-              );
             });
           });
         }
