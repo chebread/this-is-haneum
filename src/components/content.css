@@ -11,6 +11,13 @@
   height: 100px;
 }
 .content-items img {
-  width: inherit;
-  height: inherit;
+  width: 100px;
+  height: 100px;
+}
+.is-hover-content-items {
+  width: 90px;
+  height: 90px;
+  padding: 5px;
+  word-wrap: break-word;
+  overflow: auto;
 }
