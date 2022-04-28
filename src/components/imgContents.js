@@ -16,7 +16,7 @@ export const imgContents = {
     src: footerImg,
     msg: 'I bought new shorts.',
   },
-  1: {
+  2: {
     src: flowersImg,
     msg: 'Beautiful flowers.',
   },
