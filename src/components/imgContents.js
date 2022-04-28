@@ -1,5 +1,3 @@
-import face1Img from '../imgs/face1.jpg';
-import face2Img from '../imgs/face2.jpg';
 import footerImg from '../imgs/footer.jpg';
 import flowersImg from '../imgs/flowers.jpg';
 const earthImg =
@@ -10,16 +8,17 @@ const hard1Img =
   'https://velog.velcdn.com/images%2Fkim-taewoo%2Fpost%2Fb8ee8d29-42a7-4f7a-85d0-93698a2ac87b%2Ffail.gif';
 const love1Img =
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTAWduqkj6SPVIQe32haDaXg_mgSBIxGq1xA&usqp=CAU';
-const test1Img =
-  'https://magoosh.com/math/files/2018/07/shutterstock_404110102.jpg';
+const memory1Img =
+  'https://velog.velcdn.com/images%2Fjinhyukoo%2Fpost%2F8f1d8def-6de0-462e-be70-99b1616df8e7%2Fimage.png';
+const love2Img =
+  'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA3MTZfOTQg%2FMDAxNjI2NDM0ODQyNDA1.OEuAw2Kp7YJzP3NI7WPdyetDMoAf3AZwrPbWoSsGuMcg.Gfs5XvyAoCxBwL5MT10ZLeSbt_8fxT0tIqtSgQalGF0g.JPEG.herstory_ha%2F3e758b876701be74277e48f062465135.jpg&type=sc960_832';
 export const imgContents = [
-  face1Img,
   footerImg,
   flowersImg,
   earthImg,
   clothes1Img,
   hard1Img,
   love1Img,
-  face2Img,
-  test1Img,
+  memory1Img,
+  love2Img,
 ];
