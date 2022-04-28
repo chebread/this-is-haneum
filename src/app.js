@@ -15,12 +15,11 @@ const app = () => {
     renderHTML(contentMsg, document.querySelector('#root'));
     document.addEventListener('DOMContentLoaded', () => {
       renderHTML(
-        `${imgContents
+        imgContents
           .map(
             item => `<div class="content-items"><img data-src="${item}"/></div>`
           )
-          .join('')}
-        `,
+          .join(''),
         document.querySelector('.content-wrapper')
       );
       document.querySelectorAll('.content-items img').forEach(item => {

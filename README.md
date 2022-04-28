@@ -5,7 +5,8 @@ This is to express me.
 [tih](https://tih.vercel.app/)
 
 ## What features are they made of?
-- Bundling time is faster than babel because it uses esbuild.
+- Bundling time is faster than babel because it uses `esbuild`.
+- `IntersectionObserver API` was used to load the image faster.
 - Configured the layout like an SNS feed.
 
 ## License
