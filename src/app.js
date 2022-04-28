@@ -15,11 +15,23 @@ const app = () => {
     document.addEventListener('DOMContentLoaded', () => {
       renderHTML(
         `${imgContents
-          .map(item => `<div class="content-items"><img src="${item}"/></div>`)
+          .map(
+            item =>
+              `<div class="content-items"><canvas value="${item}"></canvas></div>`
+          )
           .join('')}
-        `,
+          `,
         document.querySelector('.content-wrapper')
       );
+      document.querySelectorAll('.content-items canvas').forEach(item => {
+        item.width = 100;
+        item.height = 100;
+        const img = new Image();
+        img.src = item.attributes.value.value;
+        img.onload = () => {
+          item.getContext('2d').drawImage(img, 0, 0, 100, 100);
+        };
+      });
     });
   };
   render();
