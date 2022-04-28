@@ -52,13 +52,13 @@ const app = () => {
             } else {
               renderHTML(`${imgContents[item.attributes.key.value].msg}`, item);
             }
-            item.addEventListener('touchend', e => {
-              item.classList.remove('is-hover-content-items');
-              item.className = 'content-items';
-              item.innerHTML = `<img src="${
-                imgContents[e.target.attributes.key.value].src
-              }"/>`;
-            });
+          });
+          item.addEventListener('touchend', e => {
+            item.classList.remove('is-hover-content-items');
+            item.className = 'content-items';
+            item.innerHTML = `<img src="${
+              imgContents[e.target.attributes.key.value].src
+            }"/>`;
           });
         }
       });
