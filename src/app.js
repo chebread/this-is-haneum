@@ -45,6 +45,7 @@ const app = () => {
             });
           });
         } else {
+          alert(1);
           item.addEventListener('touchmove', () => {
             item.className = ' is-hover-content-items';
             if (imgContents[item.attributes.key.value].msg === undefined) {
