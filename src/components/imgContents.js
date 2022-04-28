@@ -1,4 +1,5 @@
-import faceImg from '../imgs/face.jpg';
+import face1Img from '../imgs/face1.jpg';
+import face2Img from '../imgs/face2.jpg';
 import footerImg from '../imgs/footer.jpg';
 import flowersImg from '../imgs/flowers.jpg';
 const earthImg =
@@ -10,11 +11,12 @@ const hard1Img =
 const love1Img =
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTAWduqkj6SPVIQe32haDaXg_mgSBIxGq1xA&usqp=CAU';
 export const imgContents = [
-  faceImg,
+  face1Img,
   footerImg,
   flowersImg,
   earthImg,
   clothes1Img,
   hard1Img,
   love1Img,
+  face2Img,
 ];
