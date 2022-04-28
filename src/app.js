@@ -27,47 +27,6 @@ const app = () => {
       document.querySelectorAll('.content-items img').forEach(item => {
         new IntersectionObserver(onImgLoad).observe(item);
       });
-      document.querySelectorAll('.content-items').forEach(item => {
-        if (!('ontouchstart' in window)) {
-          item.addEventListener('mousemove', e => {
-            item.className = ' is-hover-content-items';
-            if (imgContents[item.attributes.key.value].msg === undefined) {
-              renderHTML(`This is Haneum`, item);
-            } else {
-              renderHTML(`${imgContents[item.attributes.key.value].msg}`, item);
-            }
-            item.addEventListener('mouseleave', e => {
-              item.classList.remove('is-hover-content-items');
-              item.className = 'content-items';
-              item.innerHTML = `<img data-src="${
-                imgContents[e.target.attributes.key.value].src
-              }"/>`;
-              new IntersectionObserver(onImgLoad).observe(
-                item.attributes[1].ownerElement.childNodes[0]
-              );
-            });
-          });
-        } else {
-          item.addEventListener('touchstart', e => {
-            item.className = ' is-hover-content-items';
-            if (imgContents[item.attributes.key.value].msg === undefined) {
-              renderHTML(`This is Haneum`, item);
-            } else {
-              renderHTML(`${imgContents[item.attributes.key.value].msg}`, item);
-            }
-            item.addEventListener('touchend', e => {
-              item.classList.remove('is-hover-content-items');
-              item.className = 'content-items';
-              item.innerHTML = `<img data-src="${
-                imgContents[e.target.attributes.key.value].src
-              }"/>`;
-              new IntersectionObserver(onImgLoad).observe(
-                item.attributes[1].ownerElement.childNodes[0]
-              );
-            });
-          });
-        }
-      });
     });
   };
   render();
