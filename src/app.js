@@ -3,6 +3,7 @@ import './app.css';
 import './components/content.css';
 import { renderHTML } from './components/renderHTML.js';
 import { imgContents } from './components/imgContents.js';
+import { onImgLoad } from './components/onImgLoad.js';
 
 const app = () => {
   const render = () => {
@@ -16,21 +17,14 @@ const app = () => {
       renderHTML(
         `${imgContents
           .map(
-            item =>
-              `<div class="content-items"><canvas value="${item}"></canvas></div>`
+            item => `<div class="content-items"><img data-src="${item}"/></div>`
           )
           .join('')}
-          `,
+        `,
         document.querySelector('.content-wrapper')
       );
-      document.querySelectorAll('.content-items canvas').forEach(item => {
-        item.width = 100;
-        item.height = 100;
-        const img = new Image();
-        img.src = item.attributes.value.value;
-        img.onload = () => {
-          item.getContext('2d').drawImage(img, 0, 0, 100, 100);
-        };
+      document.querySelectorAll('.content-items img').forEach(item => {
+        new IntersectionObserver(onImgLoad).observe(item);
       });
     });
   };
