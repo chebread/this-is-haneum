@@ -4,8 +4,7 @@ import './components/content.css';
 import { renderHTML } from './components/renderHTML.js';
 import { imgContents } from './components/imgContents.js';
 import { onImgLoad } from './components/onImgLoad.js';
-// const nodeEnv = process.env.NODE_ENV || 'development';
-const log = console.log;
+
 const app = () => {
   const render = () => {
     const contentMsg = `
@@ -19,48 +18,24 @@ const app = () => {
         Object.keys(imgContents)
           .map(
             key =>
-              `<div class="content-items" key="${key}"><img data-src="${imgContents[key].src}"/></div>`
+              `<div class="content-items"><img
+                data-src="${imgContents[key].src}"
+                title="${
+                  !(imgContents[key].msg === undefined)
+                    ? `${imgContents[key].msg}`
+                    : 'No description is written on this photo.'
+                }"
+                alt="${
+                  !(imgContents[key].msg === undefined)
+                    ? `${imgContents[key].msg}`
+                    : 'No description is written on this photo.'
+                }"/></div>`
           )
           .join(''),
         document.querySelector('.content-wrapper')
       );
       document.querySelectorAll('.content-items img').forEach(item => {
         new IntersectionObserver(onImgLoad).observe(item);
-      });
-      document.querySelectorAll('.content-items').forEach(item => {
-        if (!('ontouchstart' in window)) {
-          item.addEventListener('mousemove', () => {
-            item.className = ' is-hover-content-items';
-            if (imgContents[item.attributes.key.value].msg === undefined) {
-              renderHTML(`This is Haneum`, item);
-            } else {
-              renderHTML(`${imgContents[item.attributes.key.value].msg}`, item);
-            }
-            item.addEventListener('mouseleave', e => {
-              item.classList.remove('is-hover-content-items');
-              item.className = 'content-items';
-              item.innerHTML = `<img src="${
-                imgContents[e.target.attributes.key.value].src
-              }"/>`;
-            });
-          });
-        } else {
-          item.addEventListener('touchstart', () => {
-            item.className = ' is-hover-content-items';
-            if (imgContents[item.attributes.key.value].msg === undefined) {
-              renderHTML(`This is Haneum`, item);
-            } else {
-              renderHTML(`${imgContents[item.attributes.key.value].msg}`, item);
-            }
-            item.addEventListener('touchend', e => {
-              item.classList.remove('is-hover-content-items');
-              item.className = 'content-items';
-              item.innerHTML = `<img src="${
-                imgContents[e.target.attributes.key.value].src
-              }"/>`;
-            });
-          });
-        }
       });
     });
   };
