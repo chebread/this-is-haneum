@@ -10,7 +10,7 @@ const love1Img =
   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTAWduqkj6SPVIQe32haDaXg_mgSBIxGq1xA&usqp=CAU';
 const love2Img =
   'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA3MTZfOTQg%2FMDAxNjI2NDM0ODQyNDA1.OEuAw2Kp7YJzP3NI7WPdyetDMoAf3AZwrPbWoSsGuMcg.Gfs5XvyAoCxBwL5MT10ZLeSbt_8fxT0tIqtSgQalGF0g.JPEG.herstory_ha%2F3e758b876701be74277e48f062465135.jpg&type=sc960_832';
-// 필수인자: key, src
+
 export const imgContents = {
   1: {
     src: footerImg,
