@@ -1,39 +1,31 @@
 import './reset.css';
 import './app.css';
-import './components/content.css';
-import { renderHTML } from './components/renderHTML.js';
-import { imgContents } from './components/imgContents.js';
-import { onImgLoad } from './components/onImgLoad.js';
+import './routes/content.css';
+import { router } from './components/router.js';
+import { routeContents } from './components/routeContents.js';
 
-const app = () => {
-  const render = () => {
-    const contentMsg = `
-      <div class="content">
-        <div class="content-wrapper"></div>
-      </div>
-    `;
-    renderHTML(contentMsg, document.querySelector('#root'));
-    document.addEventListener('DOMContentLoaded', () => {
-      renderHTML(
-        Object.keys(imgContents)
-          .map(
-            key =>
-              `<div class="content-items"><img
-                data-src="${imgContents[key].src}"
-                alt="${
-                  !(imgContents[key].msg === undefined)
-                    ? `${imgContents[key].msg}`
-                    : 'No description is written on this photo.'
-                }"/></div>`
-          )
-          .join(''),
-        document.querySelector('.content-wrapper')
+document.body.addEventListener('click', e => {
+  if (e.target.localName === 'a') {
+    if (
+      ((routeContents[
+        e.target.href.substring(
+          e.target.href.indexOf('/', 8),
+          e.target.href.length
+        )
+      ] ===
+        undefined) ===
+        false) ===
+      true
+    ) {
+      e.preventDefault();
+      router(
+        e.target.href.substring(
+          e.target.href.indexOf('/', 8),
+          e.target.href.length
+        )
       );
-      document.querySelectorAll('.content-items img').forEach(item => {
-        new IntersectionObserver(onImgLoad).observe(item);
-      });
-    });
-  };
-  render();
-};
-app();
+    }
+    return;
+  }
+});
+router(window.location.pathname);

@@ -1,3 +1,6 @@
+a {
+  all: unset;
+}
 .content {
   display: inline;
 }
@@ -13,4 +16,12 @@
 .content-items img {
   width: inherit;
   height: inherit;
+}
+.nfp-content-wrapper {
+  padding: 5px;
+  font-size: 16px;
+}
+.nfp-content-msg a {
+  all: unset;
+  color: royalblue;
 }
