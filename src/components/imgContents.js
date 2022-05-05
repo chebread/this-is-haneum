@@ -1,7 +1,6 @@
 import footerImg from '../imgs/footer.jpg';
 import flowersImg from '../imgs/flowers.jpg';
 import dropFooterImg from '../imgs/drop-footer.jpg';
-
 const earthImg =
   'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/The_Blue_Marble_%28remastered%29.jpg/1280px-The_Blue_Marble_%28remastered%29.jpg';
 const clothes1Img =
