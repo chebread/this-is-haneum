@@ -1,6 +1,6 @@
 import { routeContents } from './routeContents.js';
 
-export const render = path => {
+export const renderRoute = path => {
   if (!routeContents[path].title) {
     document.title = 'This is Haneum';
   } else {

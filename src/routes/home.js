@@ -11,18 +11,10 @@ export const home = () => {
     `;
     renderHTML(contentMsg, document.querySelector('#root'));
     renderHTML(
-      Object.keys(imgContents)
+      imgContents
         .map(
-          key =>
-            `<div class="content-items">
-                  <img
-                  data-src="${imgContents[key].src}"
-                  alt="${
-                    !(imgContents[key].msg === undefined)
-                      ? `${imgContents[key].msg}`
-                      : 'No description is written on this photo.'
-                  }"/>
-                </div>`
+          (src, key) =>
+            `<div class="content-items" key="${key}"><img data-src="${src}"/></div>`
         )
         .join(''),
       document.querySelector('.content-wrapper')

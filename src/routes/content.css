@@ -17,9 +17,18 @@ a {
   width: inherit;
   height: inherit;
 }
+.nfp-content {
+  display: inline;
+}
 .nfp-content-wrapper {
   padding: 5px;
+}
+.nfp-content-msg {
   font-size: 16px;
+  word-wrap: break-word;
+}
+.nfp-content-msg p {
+  line-height: 16px;
 }
 .nfp-content-msg a {
   all: unset;
